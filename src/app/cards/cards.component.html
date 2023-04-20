@@ -1,0 +1,15 @@
+<app-cards-add (add)="addCard($event)"></app-cards-add>
+<app-cards-list
+  [allCardsContent]="cardsService.cards"
+  [cardSides]="stateService.cardSides"
+  (flip)="stateService.setCardSide($event)"
+  (delete)="deleteCard($event)"
+></app-cards-list>
+<button
+  tuiButton
+  type="button"
+  class="flip-all"
+  (click)="stateService.flipAll()"
+>
+  Перевернуть все карты
+</button>

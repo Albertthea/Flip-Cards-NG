@@ -1,0 +1,7 @@
+<div class="list">
+  <app-cards-item *ngFor="let c of allCardsContent"
+                  [content]="c"
+                  [isCardFlipped]="cardSides.get(c.id) || false"
+                  (click)="flipCard(c.id)"
+                  (delete)="deleteCard($event)"></app-cards-item>
+</div>
