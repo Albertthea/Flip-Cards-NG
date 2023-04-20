@@ -1,0 +1,15 @@
+<form class="form" [formGroup]="form" (submit)="submit()">
+  <h2 class="form-title">Добавить карточку</h2>
+  <tui-input class="input" formControlName="titleInput">Название</tui-input>
+  <tui-text-area class="text-area" formControlName="descriptionInput"
+    >Описание</tui-text-area
+  >
+  <button
+    type="submit"
+    tuiButton
+    class="submit-button"
+    [disabled]="form.invalid"
+  >
+    Добавить карточку
+  </button>
+</form>

@@ -1,0 +1,25 @@
+<div class="item">
+  <div class="item__inner" [class.flipped]="isCardFlipped">
+    <div class="item__front">
+      <div class="item__header item__header_type_front">
+        <div class="close-wrapper" (click)="deleteThisCard($event)">
+          <tui-svg src="tuiIconCloseLarge" class="close-icon"></tui-svg>
+        </div>
+      </div>
+      <div class="item__title-wrapper">
+        <h2 class="item__title">{{ content.title }}</h2>
+      </div>
+    </div>
+    <div class="item__back">
+      <div class="item__header">
+        <h2 class="item__title">{{ content.title }}</h2>
+        <div class="close-wrapper" (click)="deleteThisCard($event)">
+          <tui-svg src="tuiIconCloseLarge" class="close-icon"></tui-svg>
+        </div>
+      </div>
+      <p class="item__description">
+        {{ content.description }}
+      </p>
+    </div>
+  </div>
+</div>
